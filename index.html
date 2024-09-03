@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Custom Countdown Timer</title>
+    <!-- CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Custom CSS for styling -->
+    <style>
+        body {
+            background: linear-gradient(to right, #4caf50, #81c784);
+            color: white;
+        }
+    </style>
+</head>
+
+<body class="flex items-center justify-center min-h-screen">
+
+    <div class="text-center">
+        <h1 class="text-4xl font-bold mb-8">Countdown</h1>
+        <!-- Input Fields for Hours, Minutes, Seconds -->
+        <div class="mb-8">
+            <input type="number" id="hours" placeholder="Hours" class="text-black p-2 m-2 rounded-lg" min="0">
+            <input type="number" id="minutes" placeholder="Minutes" class="text-black p-2 m-2 rounded-lg" min="0" max="60">
+            <input type="number" id="seconds" placeholder="Seconds" class="text-black p-2 m-2 rounded-lg" min="0" max="60">
+            <button onclick="startCountdown()" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg"><i class="fa-solid fa-play"></i></button>
+        </div>
+
+        <div id="countdown" class="text-6xl font-bold"></div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
